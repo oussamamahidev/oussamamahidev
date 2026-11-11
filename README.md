@@ -11,7 +11,7 @@
 ### `01 / whoami`
 
 ```console
-oussama@engineering:~$ cat about.md
+oussama@engineeringEnsias:~$ cat about.md
 > Software engineering student @ ENSIAS × 1337 (42 Network)
 > Focus: Backend systems · AI engineering · software architecture
 > Location: Rabat, Morocco
