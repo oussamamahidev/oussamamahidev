@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="362" viewBox="0 0 1200 362" role="img" aria-label="Animated reliable systems engineering architecture workflow">
+  <title>Animated reliable systems engineering architecture workflow</title>
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#071020"/><stop offset=".55" stop-color="#0b1830"/><stop offset="1" stop-color="#070b1c"/></linearGradient>
+    <linearGradient id="bright" x1="0" x2="1"><stop stop-color="#49eadb"/><stop offset=".55" stop-color="#67a6ff"/><stop offset="1" stop-color="#b488ff"/></linearGradient>
+    <linearGradient id="tealblue" x1="0" x2="1"><stop stop-color="#54ffe0"/><stop offset="1" stop-color="#79baff"/></linearGradient>
+    <radialGradient id="halo"><stop stop-color="#00e4dc" stop-opacity=".22"/><stop offset="1" stop-color="#00c6e8" stop-opacity="0"/></radialGradient>
+    <radialGradient id="purplehalo"><stop stop-color="#8155d9" stop-opacity=".20"/><stop offset="1" stop-color="#8155d9" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#79b5d9" stroke-width=".6" stroke-opacity=".095"/></pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="7"/></filter>
+    <clipPath id="frame"><rect width="1200" height="362" rx="17"/></clipPath>
+    <style>
+      .mono{font-family:'SFMono-Regular',Consolas,'Liberation Mono',monospace}
+      .sans{font-family:Inter,'Segoe UI',Arial,sans-serif}
+      .pulse{animation:pulse 3.4s ease-in-out infinite}
+      .pulseB{animation:pulse 3.4s ease-in-out 1.1s infinite}
+      .blink{animation:blink 1.08s steps(2,start) infinite}
+      .orbit{transform-origin:910px 219px;animation:orbit 32s linear infinite}
+      .orbitRev{transform-origin:910px 219px;animation:orbit 39s linear infinite reverse}
+      .dash{stroke-dasharray:7 17;animation:travel 3.2s linear infinite}
+      .flowSlow{stroke-dasharray:8 15;animation:travel 7s linear infinite}
+      .float{animation:float 5s ease-in-out infinite}
+      .floatB{animation:float 5s ease-in-out 1.6s infinite}
+      .arrive{animation:arrive 1.15s ease-out both}
+      .arriveB{animation:arrive 1.2s ease-out .4s both}
+      .arriveC{animation:arrive 1.2s ease-out .8s both}
+      .sweep{animation:sweep 9s ease-in-out infinite}
+      .sweepShort{animation:sweepSmall 6s ease-in-out infinite}
+      .rail{animation:travel 4s linear infinite;stroke-dasharray:4 19}
+      .bar{animation:bar 4.2s ease-in-out infinite}
+      .focus{animation:focus 8s ease-in-out infinite}
+      @keyframes pulse{0%,100%{opacity:.95}50%{opacity:.3}}
+      @keyframes blink{50%{opacity:0}}
+      @keyframes orbit{to{transform:rotate(360deg)}}
+      @keyframes travel{to{stroke-dashoffset:-240}}
+      @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+      @keyframes arrive{from{opacity:0;transform:translateY(11px)}to{opacity:1;transform:translateY(0)}}
+      @keyframes sweep{0%,8%{transform:translateX(-700px);opacity:0}27%{opacity:.7}56%{opacity:.65}86%,100%{transform:translateX(1400px);opacity:0}}
+      @keyframes sweepSmall{0%{transform:translateX(-500px);opacity:0}50%{opacity:.7}100%{transform:translateX(1250px);opacity:0}}
+      @keyframes bar{0%,100%{opacity:.35}50%{opacity:.95}}
+      @keyframes focus{0%,100%{opacity:.28}50%{opacity:.8}}
+      @media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}
+    </style>
+  </defs>
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="362" fill="url(#base)"/>
+    <rect width="1200" height="362" fill="url(#grid)"/>
+    <rect x="1" y="1" width="1198" height="360" rx="16" fill="none" stroke="#315572" stroke-width="1" />
+    <g opacity=".8"><path d="M24 21L72 21" fill="none" stroke="#55ffe1" stroke-width="2" /><path d="M1128 340L1176 340" fill="none" stroke="#55ffe1" stroke-width="2" /><path d="M24 340L24 316" fill="none" stroke="#55ffe1" stroke-width="2" /><path d="M1176 21L1176 45" fill="none" stroke="#55ffe1" stroke-width="2" /></g>
+  <rect x="22" y="20" width="1156" height="39" rx="8" fill="#0a182b" stroke="#23445d" stroke-width="1" /><circle cx="43" cy="39" r="4.5" fill="#ff6d7d" /><circle cx="63" cy="39" r="4.5" fill="#ffd16b" /><circle cx="83" cy="39" r="4.5" fill="#65f0da" /><text x="113" y="45" font-family="monospace" font-size="12" font-weight="600" fill="#c5dfeb" letter-spacing="1.2">~/architecture/system-thinking</text><text x="1155" y="45" font-family="monospace" font-size="11" font-weight="500" fill="#8da8c2" text-anchor="end" letter-spacing=".6">failure-aware / controlled changes</text><text x="50" y="109" font-family="monospace" font-size="20" font-weight="650" fill="#55ffe1" >❯ trace request --show-boundaries</text><text x="50" y="137" font-family="sans-serif" font-size="19" font-weight="620" fill="#f3f9ff" >How I reason about a production system</text><rect x="56" y="177" width="173" height="114" rx="12" fill="#0d2037" stroke="#31556e" stroke-width="1.4" /><rect x="73" y="191" width="9" height="9" rx="2" fill="#55ffe1" stroke="none" stroke-width="1" class="pulse"/><text x="92" y="202" font-family="monospace" font-size="13" font-weight="700" fill="#f3f9ff" >SIGNAL</text><path d="M73 216L211 216" fill="none" stroke="#355671" stroke-width="1" /><text x="74" y="244" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Requests</text><text x="74" y="265" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Events / logs</text><path d="M229 235L287 235" fill="none" stroke="#3e738e" stroke-width="2" /><path d="M229 235H287" fill="none" stroke="#55ffe1" stroke-width="3" class="dash"/><path d="M278 230l9 5-9 5" fill="none" stroke="#55ffe1" stroke-width="2"/><rect x="287" y="177" width="173" height="114" rx="12" fill="#0d2037" stroke="#31556e" stroke-width="1.4" /><rect x="304" y="191" width="9" height="9" rx="2" fill="#76b8ff" stroke="none" stroke-width="1" class="pulse"/><text x="323" y="202" font-family="monospace" font-size="13" font-weight="700" fill="#f3f9ff" >SERVICE</text><path d="M304 216L442 216" fill="none" stroke="#355671" stroke-width="1" /><text x="305" y="244" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >APIs</text><text x="305" y="265" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Boundaries</text><path d="M460 235L518 235" fill="none" stroke="#3e738e" stroke-width="2" /><path d="M460 235H518" fill="none" stroke="#76b8ff" stroke-width="3" class="dash"/><path d="M509 230l9 5-9 5" fill="none" stroke="#76b8ff" stroke-width="2"/><rect x="518" y="177" width="173" height="114" rx="12" fill="#0d2037" stroke="#31556e" stroke-width="1.4" /><rect x="535" y="191" width="9" height="9" rx="2" fill="#b391ff" stroke="none" stroke-width="1" class="pulse"/><text x="554" y="202" font-family="monospace" font-size="13" font-weight="700" fill="#f3f9ff" >STATE</text><path d="M535 216L673 216" fill="none" stroke="#355671" stroke-width="1" /><text x="536" y="244" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Persistence</text><text x="536" y="265" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Consistency</text><path d="M691 235L749 235" fill="none" stroke="#3e738e" stroke-width="2" /><path d="M691 235H749" fill="none" stroke="#b391ff" stroke-width="3" class="dash"/><path d="M740 230l9 5-9 5" fill="none" stroke="#b391ff" stroke-width="2"/><rect x="749" y="177" width="173" height="114" rx="12" fill="#0d2037" stroke="#31556e" stroke-width="1.4" /><rect x="766" y="191" width="9" height="9" rx="2" fill="#76b8ff" stroke="none" stroke-width="1" class="pulse"/><text x="785" y="202" font-family="monospace" font-size="13" font-weight="700" fill="#f3f9ff" >INTELLIGENCE</text><path d="M766 216L904 216" fill="none" stroke="#355671" stroke-width="1" /><text x="767" y="244" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Retrieval</text><text x="767" y="265" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Context / agents</text><path d="M922 235L980 235" fill="none" stroke="#3e738e" stroke-width="2" /><path d="M922 235H980" fill="none" stroke="#76b8ff" stroke-width="3" class="dash"/><path d="M971 230l9 5-9 5" fill="none" stroke="#76b8ff" stroke-width="2"/><rect x="980" y="177" width="173" height="114" rx="12" fill="#0d2037" stroke="#31556e" stroke-width="1.4" /><rect x="997" y="191" width="9" height="9" rx="2" fill="#55ffe1" stroke="none" stroke-width="1" class="pulse"/><text x="1016" y="202" font-family="monospace" font-size="13" font-weight="700" fill="#f3f9ff" >SAFE ACTION</text><path d="M997 216L1135 216" fill="none" stroke="#355671" stroke-width="1" /><text x="998" y="244" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Approval</text><text x="998" y="265" font-family="monospace" font-size="14" font-weight="400" fill="#9ab9cd" >Audit / recovery</text><path d="M52 313L1148 313" fill="none" stroke="#31546d" stroke-width="1" /><text x="60" y="339" font-family="monospace" font-size="14" font-weight="550" fill="#9fc8d2" >INVARIANTS  &gt;  LATENCY TRICKS     ·     HUMAN OVERSIGHT  &gt;  BLIND AUTOMATION</text></g></svg>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Oussama Mahi — interactive engineering terminal portfolio" />
+  <meta name="theme-color" content="#081122" />
+  <title>Oussama Mahi / Terminal OS</title>
+  <style>
+    :root { --bg:#06101f;--panel:#091b30;--ink:#effcff;--muted:#89a9c0;--cyan:#65f8dc;--blue:#7db7ff;--border:#325469;--purple:#bd96fd; }
+    * {box-sizing:border-box} html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,'Segoe UI',system-ui,sans-serif; min-height:100vh;overflow-x:hidden}
+    body::before {content:"";position:fixed;inset:0;z-index:-2;pointer-events:none;background:linear-gradient(90deg,transparent 95%,#69a3cb0b 100%) 0 0/42px 42px,linear-gradient(0deg,transparent 95%,#69a3cb0b 100%) 0 0/42px 42px,radial-gradient(ellipse 55% 44% at 78% 25%,#1736639a,transparent 70%),radial-gradient(ellipse 70% 70% at 0 90%,#173f4195,transparent 66%)}
+    .wrap{max-width:1210px;margin:0 auto;padding:26px 24px 50px}
+    .top{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:13px 20px;border:1px solid var(--border);border-radius:11px;background:#071729cc;font-family:monospace;font-size:12px;letter-spacing:.1em}
+    .brand strong{color:var(--cyan)}.status{color:var(--muted);display:flex;align-items:center;gap:10px}.led{width:8px;height:8px;background:var(--cyan);border-radius:50%;box-shadow:0 0 12px #65f8dccc;animation:glow 2s ease-in-out infinite}
+    .intro{display:grid;grid-template-columns:1fr 300px;gap:20px;align-items:center;margin:38px 0 28px}.eyebrow{font:700 13px monospace;letter-spacing:.15em;color:var(--cyan)}h1{font-size:clamp(43px,7vw,81px);letter-spacing:-.06em;line-height:1;margin:16px 0 10px}h1 span{color:var(--blue)}.role{font-size:clamp(16px,2.2vw,24px);color:#c0d8eb}.subtitle{max-width:620px;color:var(--muted);line-height:1.65;margin-top:21px}
+    .radar{width:260px;height:260px;position:relative;margin:auto;display:grid;place-items:center}.radar::before,.radar::after{content:"";position:absolute;inset:16px;border-radius:50%;border:1px dashed #4380a0aa}.radar::before{animation:spin 28s linear infinite;border-top:2px solid var(--cyan)}.radar::after{inset:55px;animation:spin 18s linear infinite reverse;border-right:2px solid var(--purple)}.radar .core{width:100px;height:100px;border-radius:50%;display:grid;place-items:center;background:#0b243b;border:1px solid #72dccb;box-shadow:0 0 70px #00eccc26;color:var(--cyan);font:bold 40px monospace}.radar .sat{position:absolute;font:10px monospace;letter-spacing:.08em;border:1px solid #376c86;padding:6px;border-radius:5px;background:#07182b}.sat.one{top:6px;left:0}.sat.two{right:-7px;top:59px}.sat.three{bottom:19px;left:-8px}
+    .terminal{background:#071426ee;border:1px solid #3a7185;border-radius:13px;box-shadow:0 20px 70px #0008,inset 0 0 70px #11365a15;overflow:hidden;position:relative}.terminal::after{content:"";position:absolute;inset:38px 0 0;pointer-events:none;background:linear-gradient(180deg,transparent 0,#80bfff03 50%,transparent);background-size:100% 7px;opacity:.5}
+    .bar{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:13px 18px;border-bottom:1px solid #27475d;background:#0b2034;font:12px monospace;color:#93b5ce}.dots{display:flex;gap:8px}.dots i{display:block;width:9px;height:9px;border-radius:50%;background:#ff7089}.dots i:nth-child(2){background:#ffd16b}.dots i:nth-child(3){background:#5defd2}
+    .terminal-text{height:min(46vh,400px);min-height:275px;overflow:auto;padding:25px 30px 5px;font:14px/1.8 'SFMono-Regular',Consolas,'Liberation Mono',monospace;scrollbar-color:#276071 transparent;white-space:pre-wrap;overflow-wrap:anywhere}.termline{white-space:pre-wrap}.termline.prompt{color:var(--cyan)}.termline.muted{color:var(--muted)}.termline.accent{color:var(--blue)}.termline.notice{color:#dddbff}.termline.error{color:#fbb1bd}
+    .terminal-text a{color:var(--cyan);text-decoration:underline;text-decoration-color:#3d8a91}.inputrow{display:flex;align-items:center;padding:17px 30px;border-top:1px solid #244963;gap:11px;font:15px monospace}.prompt-glyph{color:var(--cyan);white-space:nowrap}.inputrow input{border:0;outline:0;background:transparent;color:var(--ink);width:100%;font:inherit;min-width:0;caret-color:var(--cyan)}.inputrow input::placeholder{color:#5e89a6}
+    .shortcut-list{display:flex;flex-wrap:wrap;gap:9px;margin:17px 0 0}.shortcut-list button{background:#0d253b;border:1px solid #2e586d;border-radius:6px;padding:9px 13px;color:#a6ebeb;font:12px monospace;cursor:pointer;transition:transform .2s,border-color .2s}.shortcut-list button:hover,.shortcut-list button:focus-visible{border-color:var(--cyan);transform:translateY(-2px);outline:none}
+    .footer{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:27px 0;color:#84a7bb;font:12px monospace}.footer a{color:var(--cyan)}.footleft{display:flex;flex-wrap:wrap;gap:17px}
+    .fade{animation:enter .9s ease-out both}@keyframes enter{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}@keyframes glow{50%{opacity:.25;box-shadow:0 0 3px var(--cyan)}}@keyframes spin{to{transform:rotate(360deg)}}
+    @media(max-width:740px){.wrap{padding:15px 13px 30px}.intro{grid-template-columns:1fr;margin:34px 4px 22px}.radar{display:none}.top{font-size:10px;padding:12px}.status{font-size:9px}.terminal-text{height:365px;padding:16px 14px;font-size:12px}.inputrow{padding:16px 14px;font-size:13px}.footer{align-items:flex-start;flex-direction:column}h1{font-size:45px}}
+    @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="top"><div class="brand"><strong>OM</strong> / TERMINAL OS — ENGINEERING PORTFOLIO</div><div class="status"><i class="led" aria-hidden="true"></i> LOCAL INTERACTIVE DEMO</div></header>
+    <section class="intro fade" aria-label="Introduction">
+      <div><div class="eyebrow">// BUILD · SHIP · REASON · REPEAT</div><h1>OUSSAMA <span>MAHI.</span></h1><div class="role">Software Engineer / Backend / Agentic AI</div><p class="subtitle">ENSIAS × 1337 (42 Network). Engineering dependable systems and exploring AI that operates within clear boundaries. Explore the portfolio like a command-line system.</p></div>
+      <div class="radar" aria-hidden="true"><div class="core">&lt;/&gt;</div><div class="sat one">BACKEND</div><div class="sat two">AI AGENTS</div><div class="sat three">DATA</div></div>
+    </section>
+    <section class="terminal fade" aria-label="Interactive portfolio terminal">
+      <div class="bar"><div class="dots" aria-hidden="true"><i></i><i></i><i></i></div><span>oussama@portfolio:~ / interactive-shell</span><span>UTF-8 · DEMO</span></div>
+      <div id="output" class="terminal-text" role="log" aria-live="polite" aria-relevant="additions"></div>
+      <form id="commandForm" class="inputrow" autocomplete="off"><label for="cmd" class="prompt-glyph">❯</label><input id="cmd" name="cmd" aria-label="Type a terminal command" spellcheck="false" placeholder="type help to get started..." /><span class="prompt-glyph" aria-hidden="true">█</span></form>
+    </section>
+    <nav class="shortcut-list" aria-label="Suggested terminal commands"><button type="button" data-command="help">$ help</button><button type="button" data-command="whoami">$ whoami</button><button type="button" data-command="skills">$ skills</button><button type="button" data-command="projects">$ projects</button><button type="button" data-command="architecture">$ architecture</button><button type="button" data-command="contact">$ contact</button></nav>
+    <div class="footer"><div class="footleft"><a href="https://github.com/oussamamahidev" target="_blank" rel="noopener noreferrer">GITHUB</a><a href="https://github.com/oussamamahidev?tab=repositories" target="_blank" rel="noopener noreferrer">REPOSITORIES</a></div><span>NO BACKEND · NO TRACKERS · NO FAKE METRICS</span></div>
+  </main>
+  <script>
+    "use strict";
+    const output=document.getElementById('output');
+    const input=document.getElementById('cmd');
+    const form=document.getElementById('commandForm');
+    const projects={
+      '1': ['DevPilot AI','https://github.com/oussamamahidev/DevPilot-AI'],
+      '2': ['Maroc Affiliate AI','https://github.com/oussamamahidev/Marketing'],
+      '3': ['mini-rag-pro','https://github.com/oussamamahidev/mini-rag-pro'],
+      '4': ['Terminal Portfolio','https://github.com/oussamamahidev/terminalPortfolio']
+    };
+    const history=[];let historyPos=0;
+    function write(message='',style=''){
+      const div=document.createElement('div');div.className='termline '+style;
+      div.textContent=message;
+      output.appendChild(div);output.scrollTop=output.scrollHeight;
+    }
+    function addLink(label,url){
+      const line=document.createElement('div');line.className='termline accent';
+      const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;
+      line.appendChild(a);output.appendChild(line);output.scrollTop=output.scrollHeight;
+    }
+    function run(raw){
+      const command=raw.trim();
+      if(!command)return;
+      write('❯ '+command,'prompt');
+      const [name,...params]=command.split(/\s+/);
+      switch(name.toLowerCase()){
+        case 'help':
+          write('AVAILABLE COMMANDS / type a command then press Enter','accent');
+          write('  whoami        engineer identity & education');
+          write('  skills        grouped technologies and practices');
+          write('  projects      repositories and exploration areas');
+          write('  open <1-4>    open a project on GitHub');
+          write('  architecture  engineering philosophy');
+          write('  focus         current areas of learning');
+          write('  contact       GitHub & project links');
+          write('  clear         reset this terminal');
+          break;
+        case 'whoami':
+          write('OUSSAMA MAHI  //  SOFTWARE ENGINEERING','accent');
+          write('ENSIAS Engineering Cycle + 1337 (42 Network), Rabat, Morocco.');
+          write('Backend architecture · applied AI · reliable software.');
+          break;
+        case 'skills':
+          write('ENGINEERING CAPABILITY MAP','accent');
+          write('  [BACKEND]    Java · Python · Spring Boot · FastAPI · REST · DDD');
+          write('  [AI]         RAG · LLM APIs · Qdrant · embeddings · multi-agent');
+          write('  [DATA]       PostgreSQL · MongoDB · MySQL · Redis');
+          write('  [FRONTEND]   TypeScript · React · Next.js · JavaScript');
+          write('  [PLATFORM]   Docker · Git · Linux · CI/CD · Kubernetes concepts');
+          write('  [PRACTICES]  Testing · SOLID · security · reliability · ADRs');
+          write('This is a working and learning stack, not a mastery score.','muted');
+          break;
+        case 'projects':
+          write('SELECTED REPOSITORIES','accent');
+          Object.entries(projects).forEach(([id,p])=>addLink('  '+id+' / '+p[0]+'  ↗',p[1]));
+          write('Use: open 1  ...  open 4','muted');
+          break;
+        case 'open':
+          if(projects[params[0]]){
+            write('Opening '+projects[params[0]][0]+' in a new tab...','accent');
+            // Only open URLs from fixed internal allowlist, never arbitrary user strings.
+            window.open(projects[params[0]][1],'_blank','noopener,noreferrer');
+          }else write('Usage: open <1-4>   (run projects to see IDs)','error');
+          break;
+        case 'architecture':
+          write('ARCHITECTURE / REQUEST TO CONTROLLED ACTION','accent');
+          write('  SIGNAL -> API / BOUNDARY -> STATE -> KNOWLEDGE -> SAFE ACTION');
+          write('  Protect invariants. Design for retries and failures.');
+          write('  Keep automation auditable and human-approved where needed.');
+          break;
+        case 'focus':
+          write('CURRENT AREAS OF LEARNING','accent');
+          write('  Distributed systems: concurrency, idempotency, consistency');
+          write('  Applied AI: RAG, multi-agent orchestration, evaluation');
+          write('  Cloud native: containerization, observability, Kubernetes');
+          break;
+        case 'contact':
+          write('PUBLIC CONTACT CHANNEL','accent');
+          addLink('  GitHub / oussama-mahi ↗','https://github.com/oussamamahidev');
+          break;
+        case 'clear':
+          output.replaceChildren();write('Terminal cleared. Type help to get started.','muted');
+          break;
+        default:
+          write('Command not found: '+name+'   (type help)','error');
+      }
+      write('');
+    }
+    form.addEventListener('submit',e=>{
+      e.preventDefault(); const command=input.value; input.value='';
+      if(command.trim()){history.push(command);historyPos=history.length;run(command)}
+      input.focus();
+    });
+    input.addEventListener('keydown',e=>{
+      if(e.key==='ArrowUp'){e.preventDefault();historyPos=Math.max(0,historyPos-1);input.value=history[historyPos]||''}
+      if(e.key==='ArrowDown'){e.preventDefault();historyPos=Math.min(history.length,historyPos+1);input.value=history[historyPos]||''}
+      if(e.key==='Tab'){
+        const names=['help','whoami','skills','projects','open','architecture','focus','contact','clear'];
+        const matches=names.filter(c=>c.startsWith(input.value.toLowerCase()));
+        if(matches.length===1){e.preventDefault();input.value=matches[0]}
+      }
+    });
+    document.querySelectorAll('[data-command]').forEach(button=>button.addEventListener('click',()=>{input.value='';run(button.dataset.command);input.focus()}));
+    write('TERMINAL OS v2.0  /  ENGINEERING PROFILE','accent');
+    write('Local interactive portfolio, no server required.','muted');
+    write('Type help to inspect the workspace.');
+    write('');
+  </script>
+</body>
+</html>

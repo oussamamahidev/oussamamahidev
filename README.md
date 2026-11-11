@@ -1,111 +1,122 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Animated Oussama Mahi engineering portfolio hero" width="100%" />
+<img src="./assets/hero.svg" width="100%" alt="Animated Terminal OS profile for Oussama Mahi — backend, AI and software engineering" />
 
-<br />
+<!-- No third-party banner services. Pure SVG / CSS. -->
 
-**Backend Engineering** &nbsp;·&nbsp; **Distributed Systems** &nbsp;·&nbsp; **Agentic AI**
-
-<sub>Software Engineering @ ENSIAS &nbsp; | &nbsp; 1337 Coding School (42 Network) &nbsp; | &nbsp; Rabat, Morocco</sub>
-
-<br /><br />
-
-<a href="https://github.com/oussamamahidev?tab=repositories"><img src="https://img.shields.io/badge/EXPLORE_PROJECTS-111A30?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Explore projects" /></a>
-<a href="https://github.com/oussamamahidev/DevPilot-AI"><img src="https://img.shields.io/badge/FEATURED_WORK-2B2454?style=for-the-badge&amp;logo=github&amp;logoColor=white" alt="Featured work" /></a>
+[**VIEW THE CODE**](https://github.com/oussamamahidev?tab=repositories) &nbsp; / &nbsp; [**DEV PILOT AI**](https://github.com/oussamamahidev/DevPilot-AI) &nbsp; / &nbsp; [**MAROC AFFILIATE AI**](https://github.com/oussamamahidev/Marketing)
 
 </div>
 
-<br />
+### `01 / whoami`
 
-### 01 / The engineer behind the code
+```console
+oussama@engineering:~$ cat about.md
+> Software engineering student @ ENSIAS × 1337 (42 Network)
+> Focus: Backend systems · AI engineering · software architecture
+> Location: Rabat, Morocco
+> Mindset: Understand the trade-offs. Build for failure. Keep learning.
+```
 
-I am a software engineering student working at the intersection of **backend architecture, reliable systems, and applied AI**. I enjoy reasoning about *why* an architecture works: failure modes, boundaries, data consistency, observability, and the trade-offs behind each engineering decision.
+I enjoy building software where **backend engineering meets intelligent systems**: clear service boundaries, well-defined APIs, reliable data handling, retrieval pipelines, and agents with human oversight. I care as much about **why a system works and how it fails** as I do about writing the code.
 
-I build with **Java, Python, TypeScript, Spring Boot, and FastAPI**, and I'm exploring the engineering foundations of distributed and AI-assisted systems. I'm interested in well-designed software rather than complexity for its own sake.
-
-### 02 / How I think about systems
+### `02 / sudo ./skills --professional --grouped`
 
 <div align="center">
-<img src="./assets/systems.svg" alt="Animated overview showing how engineering signals move through services, knowledge and controlled decisions" width="100%" />
+<img src="./assets/skills-terminal.svg" width="100%" alt="Animated terminal dashboard: backend, AI systems, data, frontend, platform, engineering quality and technologies" />
 </div>
 
-<br />
+<details>
+<summary><strong>▸ Expand the stack in searchable, accessible text</strong></summary>
 
-### 03 / Selected work
+| Domain | Technologies and concepts |
+| --- | --- |
+| **Backend & architecture** | Java, Python, Spring Boot, FastAPI, REST APIs, Microservices, DDD, OAuth2, JWT, RBAC |
+| **Agentic AI & retrieval** | LLM APIs, multi-agent workflows, RAG, Qdrant, embeddings, vector search, Gemini, OpenAI APIs, evaluation |
+| **Data & messaging** | PostgreSQL, MongoDB, MySQL, Redis, SQL, data modeling, Kafka concepts, idempotency |
+| **Frontend** | TypeScript, JavaScript, React, Next.js, API integration, component design |
+| **Platform & delivery** | Docker, Git, Linux, GitHub Actions, CI/CD, Jenkins, Kubernetes foundations |
+| **Engineering practices** | Testing, code review, SOLID, design patterns, ADRs, observability, security, reliability and recovery |
+
+**Note:** This is a working and learning stack, not a claim of production-level mastery in every listed technology.
+
+</details>
+
+### `03 / system-thinking --trace`
+
+<div align="center">
+<img src="./assets/systems-map.svg" width="100%" alt="Animated architecture map of signals, service boundaries, data, intelligence and approved actions" />
+</div>
+
+> *Strong engineering is not the largest architecture diagram. It is being able to justify boundaries, protect invariants, observe failures, and recover safely.*
+
+### `04 / ls ~/selected-work`
+
+<div align="center">
+<img src="./assets/projects-terminal.svg" width="100%" alt="Animated terminal showing DevPilot AI, Maroc Affiliate AI, mini-rag-pro and Terminal Portfolio" />
+</div>
 
 <table>
 <tr>
 <td width="50%" valign="top">
 
-**[DevPilot AI ↗](https://github.com/oussamamahidev/DevPilot-AI)**  
-`AI ENGINEERING` · `WORK IN PROGRESS`
+**[01 / DevPilot AI](https://github.com/oussamamahidev/DevPilot-AI)**
 
-Multi-workspace document intelligence platform with a FastAPI backend, Next.js frontend, PostgreSQL, Qdrant and Docker-based developer workflow. The public repository currently documents its foundation and planned RAG capabilities.
+`AI ENGINEERING` · `EVOLVING`
 
-**Focus:** service boundaries · local AI · data pipelines
+A document-intelligence and AI engineering workspace built around **FastAPI, Next.js, PostgreSQL**, and retrieval-oriented system design. Exploring multi-agent workflows, data pipelines and robust service boundaries.
+
 </td>
 <td width="50%" valign="top">
 
-**[Maroc Affiliate AI ↗](https://github.com/oussamamahidev/Marketing)**  
-`BACKEND ENGINEERING` · `WORK IN PROGRESS`
+**[02 / Maroc Affiliate AI](https://github.com/oussamamahidev/Marketing)**
 
-AI-assisted marketing system with a strong emphasis on trustworthy backend foundations. Current public work covers configuration, PostgreSQL integration, structured logging, health checks and quality gates.
+`BACKEND` · `EVOLVING`
 
-**Focus:** explicit transactions · reliability · security
+An AI-assisted marketing workflow emphasizing **controlled actions, auditable decisions, approvals, validation and data integrity**. Python/FastAPI and PostgreSQL foundations.
+
 </td>
 </tr>
 <tr>
 <td valign="top">
 
-**[mini-rag-pro ↗](https://github.com/oussamamahidev/mini-rag-pro)**  
-`RETRIEVAL AUGMENTED GENERATION`
+**[03 / mini-rag-pro](https://github.com/oussamamahidev/mini-rag-pro)**
 
-A focused repository for exploring RAG concepts. Documentation is being developed; see the source for its current implementation.
+`RETRIEVAL` · `EXPERIMENTS`
 
-**Focus:** retrieval · language models · experimentation
+Hands-on learning around **retrieval-augmented generation**, vector retrieval and experimentation with grounded language-model outputs.
+
 </td>
 <td valign="top">
 
-**[Terminal Portfolio ↗](https://github.com/oussamamahidev/terminalPortfolio)**  
-`FRONTEND` · `NEXT.JS`
+**[04 / Terminal Portfolio](https://github.com/oussamamahidev/terminalPortfolio)**
 
-A portfolio experiment using Next.js. An opportunity to explore distinctive interaction patterns and the visual side of engineering.
+`FRONTEND` · `DESIGN`
 
-**Focus:** interface design · TypeScript · web
+A **Next.js / TypeScript** portfolio experiment exploring the intersection of user experience, interaction design and software engineering identity.
+
 </td>
 </tr>
 </table>
 
-### 04 / Tools I work with
+### `05 / cat current-interests.txt`
+
+```yaml
+learning_and_building:
+  distributed_systems: [concurrency, messaging, sagas, idempotency, consistency]
+  applied_ai: [RAG, agents, evaluation, human-in-the-loop]
+  platform: [containers, Kubernetes, observability, CI/CD]
+  engineering: [architecture, testing, security, clean design]
+
+principle: "Build the simplest system that handles the real failure modes."
+```
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=java,python,ts,js,spring,fastapi,react,nextjs,postgres,mongodb,docker,git,linux&amp;theme=dark" alt="Java, Python, TypeScript, JavaScript, Spring Boot, FastAPI, React, Next.js, PostgreSQL, MongoDB, Docker, Git, Linux" />
+<img src="./assets/footer.svg" width="100%" alt="Animated terminal footer: Good systems are designed for what happens when things go wrong" />
 
-<br /><br />
+**[Repositories](https://github.com/oussamamahidev?tab=repositories)** &nbsp; · &nbsp; **[DevPilot AI](https://github.com/oussamamahidev/DevPilot-AI)** &nbsp; · &nbsp; **[Maroc Affiliate AI](https://github.com/oussamamahidev/Marketing)**
 
-`API DESIGN` &nbsp; `DATABASES` &nbsp; `RAG` &nbsp; `DOCKER` &nbsp; `TESTING` &nbsp; `ARCHITECTURE`
-
-</div>
-
-### 05 / Currently exploring
-
-- **Distributed systems:** messaging, concurrency, idempotency, resilience and data consistency.
-- **AI engineering:** retrieval pipelines, multi-agent coordination, evaluation and human oversight.
-- **Cloud-native engineering:** observability, containers, Kubernetes and deployment workflows.
-
----
-
-<div align="center">
-
-<sub>GOOD SYSTEMS ARE DESIGNED FOR WHAT HAPPENS WHEN THINGS GO WRONG.</sub>
-
-<br />
-
-[**View repositories**](https://github.com/oussamamahidev?tab=repositories) &nbsp;·&nbsp; [**DevPilot AI**](https://github.com/oussamamahidev/DevPilot-AI) &nbsp;·&nbsp; [**Maroc Affiliate AI**](https://github.com/oussamamahidev/Marketing)
-
-<br /><br />
-
-<sub>Designed for GitHub · Animated SVG · Motion respects reduced-motion preferences</sub>
+<sub>Terminal OS × AI Command Center • self-contained animated SVG • reduced-motion friendly</sub>
 
 </div>
