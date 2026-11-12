@@ -7,7 +7,7 @@ import xml.etree.ElementTree as ET
 
 root=Path(__file__).resolve().parents[1]
 readme=(root/'README.md').read_text(encoding='utf-8')
-images=re.findall(r'src=["\'](\.\/assets\/[^"\']+\.svg)["\']',readme)
+images=re.findall(r'src=["\'](\.\/asset\/[^"\']+\.svg)["\']',readme)
 if not images:
     sys.exit('FAIL: README.md has no asset references')
 errors=[]

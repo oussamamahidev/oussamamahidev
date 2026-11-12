@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" width="100%" alt="Animated Terminal OS profile for Oussama Mahi — backend, AI and software engineering" />
+<img src="./asset/hero.svg" width="100%" alt="Animated Terminal OS profile for Oussama Mahi — backend, AI and software engineering" />
 
 <!-- No third-party banner services. Pure SVG / CSS. -->
 
@@ -23,7 +23,7 @@ I enjoy building software where **backend engineering meets intelligent systems*
 ### `02 / sudo ./skills --professional --grouped`
 
 <div align="center">
-<img src="./assets/skills-terminal.svg" width="100%" alt="Animated terminal dashboard: backend, AI systems, data, frontend, platform, engineering quality and technologies" />
+<img src="./asset/skills-terminal.svg" width="100%" alt="Animated terminal dashboard: backend, AI systems, data, frontend, platform, engineering quality and technologies" />
 </div>
 
 <details>
@@ -45,7 +45,7 @@ I enjoy building software where **backend engineering meets intelligent systems*
 ### `03 / system-thinking --trace`
 
 <div align="center">
-<img src="./assets/systems-map.svg" width="100%" alt="Animated architecture map of signals, service boundaries, data, intelligence and approved actions" />
+<img src="./asset/systems-map.svg" width="100%" alt="Animated architecture map of signals, service boundaries, data, intelligence and approved actions" />
 </div>
 
 > *Strong engineering is not the largest architecture diagram. It is being able to justify boundaries, protect invariants, observe failures, and recover safely.*
@@ -53,7 +53,7 @@ I enjoy building software where **backend engineering meets intelligent systems*
 ### `04 / ls ~/selected-work`
 
 <div align="center">
-<img src="./assets/projects-terminal.svg" width="100%" alt="Animated terminal showing DevPilot AI, Maroc Affiliate AI, mini-rag-pro and Terminal Portfolio" />
+<img src="./asset/projects-terminal.svg" width="100%" alt="Animated terminal showing DevPilot AI, Maroc Affiliate AI, mini-rag-pro and Terminal Portfolio" />
 </div>
 
 <table>
@@ -113,7 +113,7 @@ principle: "Build the simplest system that handles the real failure modes."
 
 <div align="center">
 
-<img src="./assets/footer.svg" width="100%" alt="Animated terminal footer: Good systems are designed for what happens when things go wrong" />
+<img src="./asset/footer.svg" width="100%" alt="Animated terminal footer: Good systems are designed for what happens when things go wrong" />
 
 **[Repositories](https://github.com/oussamamahidev?tab=repositories)** &nbsp; · &nbsp; **[DevPilot AI](https://github.com/oussamamahidev/DevPilot-AI)** &nbsp; · &nbsp; **[Maroc Affiliate AI](https://github.com/oussamamahidev/Marketing)**
 

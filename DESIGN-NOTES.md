@@ -16,7 +16,7 @@ The goal is *professional visual differentiation*, not to misrepresent the autho
 
 ## Editing
 
-The generator is in `scripts/generate_assets.py` and uses only Python stdlib. All colors, positions and copy are editable. Run `python3 scripts/generate_assets.py`, then validate using `python3 scripts/validate_profile.py`.
+The generator is in `scripts/generate_asset.py` and uses only Python stdlib. All colors, positions and copy are editable. Run `python3 scripts/generate_asset.py`, then validate using `python3 scripts/validate_profile.py`.
 
 ## Content boundaries
 
@@ -26,16 +26,16 @@ Skill entries include concepts and technologies being learned or practiced, not 
 
 ## File inventory
 
-- `assets/hero.svg`: boot console + AI orbit + identity
-- `assets/skills-terminal.svg`: six-card terminal skills matrix
-- `assets/systems-map.svg`: request-to-controlled-action flow
-- `assets/projects-terminal.svg`: 4 terminal repository windows
-- `assets/footer.svg`: closing terminal banner
+- `asset/hero.svg`: boot console + AI orbit + identity
+- `asset/skills-terminal.svg`: six-card terminal skills matrix
+- `asset/systems-map.svg`: request-to-controlled-action flow
+- `asset/projects-terminal.svg`: 4 terminal repository windows
+- `asset/footer.svg`: closing terminal banner
 - `README.md`: publishable GitHub profile Markdown
 - `docs/index.html`: optional real, keyboard-driven terminal web app for GitHub Pages
-- `preview/profile-preview.html`: optional full visual preview, not required by GitHub
-- `scripts/generate_assets.py`: generator source for every animated SVG
+- `previews/profile-previews.html`: optional full visual previews, not required by GitHub
+- `scripts/generate_asset.py`: generator source for every animated SVG
 - `scripts/validate_profile.py`: XML and reference validator
 - `.github/workflows/profile-check.yml`: validation on change
 
-- `backup-previous-version/`: copy of the files you originally supplied, for easy comparison or rollback.
+- `backup-previous-versions/`: copy of the files you originally supplied, for easy comparison or rollback.

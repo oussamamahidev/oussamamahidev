@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./assets/hero.svg" alt="Animated Oussama Mahi engineering portfolio hero" width="100%" />
+<img src="./asset/hero.svg" alt="Animated Oussama Mahi engineering portfolio hero" width="100%" />
 
 <br />
 
@@ -26,7 +26,7 @@ I build with **Java, Python, TypeScript, Spring Boot, and FastAPI**, and I'm exp
 ### 02 / How I think about systems
 
 <div align="center">
-<img src="./assets/systems.svg" alt="Animated overview showing how engineering signals move through services, knowledge and controlled decisions" width="100%" />
+<img src="./asset/systems.svg" alt="Animated overview showing how engineering signals move through services, knowledge and controlled decisions" width="100%" />
 </div>
 
 <br />

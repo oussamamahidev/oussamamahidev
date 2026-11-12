@@ -1,10 +1,10 @@
 # Publish your Terminal OS GitHub profile
 
-## 1. Preview the package
+## 1. previews the package
 
-- Start by opening **`preview/profile-preview.html`** in your browser (or open `assets/hero.svg` directly).
-- The profile itself is defined in `README.md`. The 5 SVG designs are in `assets/`.
-- All source code for all 5 designs is in `scripts/generate_assets.py`.
+- Start by opening **`previews/profile-previews.html`** in your browser (or open `asset/hero.svg` directly).
+- The profile itself is defined in `README.md`. The 5 SVG designs are in `asset/`.
+- All source code for all 5 designs is in `scripts/generate_asset.py`.
 
 ## 2. Publish it to your GitHub profile
 
@@ -24,10 +24,10 @@ git clone https://github.com/oussamamahidev/oussamamahidev.git
 cd oussamamahidev
 
 # Make a backup of the original README before copying these files.
-# Copy README.md and assets/ from this ZIP folder to this cloned repo.
+# Copy README.md and asset/ from this ZIP folder to this cloned repo.
 
 python3 scripts/validate_profile.py  # only after also copying the included scripts/ folder
-git add README.md assets/ scripts/ INSTALL.md .github/
+git add README.md asset/ scripts/ INSTALL.md .github/
 git commit -m "Build animated Terminal OS engineering profile"
 git push origin main
 ```
@@ -38,19 +38,19 @@ If your branch is named something other than `main`, push to that branch. If the
 
 1. Open the profile repository.
 2. Edit and replace the root `README.md` with the new one.
-3. Upload the **full `assets/` directory**, preserving each path (`assets/hero.svg`, `assets/skills-terminal.svg`, `assets/systems-map.svg`, `assets/projects-terminal.svg`, `assets/footer.svg`).
+3. Upload the **full `asset/` directory**, preserving each path (`asset/hero.svg`, `asset/skills-terminal.svg`, `asset/systems-map.svg`, `asset/projects-terminal.svg`, `asset/footer.svg`).
 4. Commit changes and visit your GitHub profile page.
 
 **Important:** Your account has not been changed by creating this ZIP. Uploading/pushing is a separate step.
 
 ## 3. Customize your skills and wording
 
-Open `scripts/generate_assets.py` and edit the `cards` data inside `make_skills()`. Modify the hero in `make_hero()` and projects in `make_projects()`.
+Open `scripts/generate_asset.py` and edit the `cards` data inside `make_skills()`. Modify the hero in `make_hero()` and projects in `make_projects()`.
 
 Then run:
 
 ```bash
-python3 scripts/generate_assets.py
+python3 scripts/generate_asset.py
 python3 scripts/validate_profile.py
 ```
 
@@ -58,7 +58,7 @@ Edit `README.md` to keep the searchable text version synchronized.
 
 ## 4. Layout, animation and accessibility notes
 
-- All 5 assets are vector SVG: crisp at any resolution.
+- All 5 asset are vector SVG: crisp at any resolution.
 - Animations use SVG CSS keyframes: node pulses, dashed data flows, rotating orbits, terminal cursor, cards and subtle motion.
 - No JavaScript, no `<foreignObject>`, no remote fonts, no external image hosts or API tokens.
 - A `prefers-reduced-motion` media query disables animations for visitors who request reduced motion.

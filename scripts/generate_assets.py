@@ -2,7 +2,7 @@
 """Generate the full animated Terminal OS × AI Command Center GitHub README artwork.
 
 Pure Python standard library; outputs self-contained SVGs (no JavaScript, fonts,
-remote assets or package dependencies). Run from any directory.
+remote asset or package dependencies). Run from any directory.
 """
 from __future__ import annotations
 
@@ -11,8 +11,8 @@ from pathlib import Path
 import math
 
 BASE = Path(__file__).resolve().parents[1]
-ASSETS = BASE / 'assets'
-ASSETS.mkdir(parents=True, exist_ok=True)
+asset = BASE / 'asset'
+asset.mkdir(parents=True, exist_ok=True)
 
 BG = '#070d1c'; PANEL = '#0b1729'; INK = '#f3f9ff'; MUTED = '#8da8c2';
 TEAL = '#55ffe1'; BLUE = '#76b8ff'; VIOLET = '#b391ff'
@@ -110,7 +110,7 @@ def pill(x,y,w,label, color=TEAL):
 
 
 def write_asset(name, parts):
-    out=ASSETS/name
+    out=asset/name
     out.write_text(''.join(parts),encoding='utf-8')
     print(f'{out.relative_to(BASE)}: {out.stat().st_size:,} bytes')
 
